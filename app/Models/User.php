@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -34,6 +33,7 @@ class User extends Authenticatable
         'city',
         'country',
         'postal_code',
+        'total_points'
     ];
 
     /**
@@ -55,7 +55,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'date_of_birth' => 'date',
+        'birth' => 'date',
         'gender' => Gender::class,
 
     ];
@@ -69,6 +69,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+
+    public function associations()
+    {
+        return $this->belongsToMany(Association::class, 'associations_users');
+    }
 
     public function bike()
     {

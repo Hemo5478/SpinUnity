@@ -15,11 +15,12 @@ class BillController extends Controller
     {
         $bill = Bill::find($bill->id);
         $location = LocationVelo::find($bill->location_id);
-        return view('FrontEnd.locationvelo.stripe',compact("bill","location"));
+        return view('frontend.rentbike.stripe',compact("bill","location"));
     }
     //
     public function store(LocationVelo $location)
-    {
+    {  
+
         $bike = Bike::find($location->bike_id);
         $bill= Bill::create([
             "location_id"  => $location->id,

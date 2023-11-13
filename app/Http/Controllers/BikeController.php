@@ -15,10 +15,18 @@ class BikeController extends Controller
      */
     public function index()
     {
-        $bikes = Bike::paginate(2);
+        $bikes = Bike::paginate(7);
 
         return view('backend.velo.index',compact("bikes"));
     }
+
+    public function shop()
+    {
+        $bikes = Bike::paginate(7);
+
+        return view('frontend.shop.index',compact("bikes"));
+    }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +45,7 @@ class BikeController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         // $this->validate($request, [
         //     'image'     => 'required|image|mimes:png,jpg,jpeg',
         // ]);
@@ -48,15 +56,16 @@ class BikeController extends Controller
 
         $request->validate([
             'marque'          =>  'required|alpha',
-            'vitesse'          =>  'required|alpha',
+            'vitesse'          =>  'required',
             'type'          =>  'required',
             'etat'         =>  'required',
             'couleur'         =>  'required',
             'taille'         =>  'required',
             'prix'         =>  'required',
             'quantite'         =>  'required',
-            'imageUrl'         =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
+            'imageUrl'         =>  'required|image|mimes:jpg,png,jpeg,gif,svg,webp|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
         ]);
+        #dd($request->all());
 
         $bike = Bike::create([
             'imageUrl'     => $imageUrl->hashName(),
@@ -68,9 +77,9 @@ class BikeController extends Controller
             'taille'     => $request->taille,
             'prix'     => $request->prix,
             'quantite'     => $request->quantite,
-
-
+            'user_id' => 0
         ]);
+
 
         if($bike){
             //redirect dengan pesan sukses
@@ -87,11 +96,13 @@ class BikeController extends Controller
      * @param  \App\Models\Bike  $bike
      * @return \Illuminate\Http\Response
      */
-    public function show(Bike $bike)
+    public function show($bikeId)
     {
-        //
+        // Retrieve the product data based on $productId
+        $bike = Bike::findOrFail($bikeId);
+        // Pass the product data to the view
+        return view('frontend.shop.show', compact('bike'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -190,7 +201,7 @@ class BikeController extends Controller
  * @return \Illuminate\Http\Response
 */
 public function bike() {
-    $data = Bike::latest()->paginate(3);
+    $data = Bike::latest()->paginate(5);
     return view('frontend.bike', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
 }
 

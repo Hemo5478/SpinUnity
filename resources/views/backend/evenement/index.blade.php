@@ -1,8 +1,6 @@
 @extends('backend.master')
 
 @section('content')
-
-
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -24,11 +22,11 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                 
                     <th>Event Name</th>
-                    <th>creator Email</th>
-                    <th>Event Place</th>
+                    <th>Event Description</th>
+                    <th>Event Location</th>
                     <th>Event Date</th>
+                    <th>Event Association</th>
                     <th width="280px">Action</th>
                 </tr>
             </thead>
@@ -36,11 +34,10 @@
                 @foreach ($evenements as $evenement)
                     <tr>
                         
-                        <td>{{ $evenement->nameevent }}</td>
-                        <td>{{ $evenement->themeevent }}</td>
-                        <td>{{ $evenement->lieuevent }}</td>
+                        <td>{{ $evenement->name }}</td>
+                        <td>{{ $evenement->description }}</td>
+                        <td>{{ $evenement->location }}</td>
                         <td>{{ $evenement->date->format('d/m/Y') }}</td>
-
                         <td>
                             <form action="{{ route('evenements.destroy',$evenement->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('evenements.edit',$evenement->id) }}">Edit</a>
@@ -50,7 +47,7 @@
                             </form>
                         </td>
                     </tr>
-                    @endforeach
+                @endforeach
             </tbody>
         </table>
         {!! $evenements->links() !!}

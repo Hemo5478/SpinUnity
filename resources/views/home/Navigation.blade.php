@@ -1,36 +1,51 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-              
-                
-                <div class="container">
-                  
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">
-                          <!-- small size logo -->
-                          <img src="images/logobike.png" alt="logo">
+<header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              SPINUNITY
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                        </a>
-                    </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#HOME" class="nav-item">HOME</a></li>
-                        <li><a href="#about" class="nav-item">ABOUT</a></li>
-                        <li><a href="#associations" class="nav-item">ASSOCIATIONS</a></li>
-                        <li><a href="#performers" class="nav-item">PERFORMERS</a></li>
-                        <li><a href="#timeline" class="nav-item">TIMELINE</a></li>
-                        <li><a href="#numbers" class="nav-item">NUMBERS</a></li>
-                        <li><a href="#contact-us" class="nav-item">CONTACT</a></li>
-                  </ul>
-                 
-                 
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-</nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cycle.html"> Our cycles </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{route('login')}}"> Login </a>
+                </li>
+              </ul>
+              <div class="quote_btn-container ">
+                <a href="" class="call_link">
+                  <span> Call Now: </span>+01 1234567890
+                </a>
+                <a href="" class="cart_link">
+                  <img src="images/cart.png" alt="">
+                  <span class="cart_number">
+                    0
+                  </span>
+                </a>
+                <form class="form-inline ">
+                  <button class="btn  nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>

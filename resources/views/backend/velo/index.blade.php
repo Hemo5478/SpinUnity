@@ -37,18 +37,20 @@ transition: transform .1s;
 <div class="uper">
 
   
-    <a href="#"data-toggle="modal" data-target="#ModalCreate" class="btn btn-md mb-3"style="background-color:#4e73df;color:white">Ajouter vélo</a>
+    <a href="#"data-toggle="modal" data-target="#ModalCreate" class="btn btn-md mb-3"style="background-color:#4e73df;color:white">Add Bike</a>
 
-  <table class="table ">
-
+  <table class="table">
     <thead>
         <tr>
-          <td>Marque</td>
-          <td>Couleur</td>
-
+          <td>Brand</td>
+          <td>Color</td>
+          <td>Speed</td>
           <td>Type</td>
-          <td>Prix</td>
+          <td>Status</td>
+          <td>Size</td>
+          <td>Price</td>
           <td>Image</td>
+          <td>Quantity</td>
           <td colspan="2">Action</td>
         </tr>
     </thead>
@@ -58,11 +60,16 @@ transition: transform .1s;
         <tr>
             <td>{{$bike->marque}}</td>
             <td><div id="cercle" style="background:{{ $bike->couleur}}"></div></td>
+            <td>{{$bike->vitesse}}</td>
 
             <td>{{$bike->type}}</td>
+            <td>{{$bike->etat}}</td>
+            <td>{{$bike->taille}}</td>
 
             <td>{{$bike->prix}}</td>
+
             <td><img src="{{ Storage::url('public/veloImg/').$bike->imageUrl }}" class="rounded img" style="width: 60px;border-radius:5%" ></td>
+            <td>{{$bike->quantite}}</td>
 
             <td>
               <a href="#" data-toggle="modal" data-target="#ModalUpdate{{$bike->id}}" class="btn"><i class='fas fa-edit'></i>

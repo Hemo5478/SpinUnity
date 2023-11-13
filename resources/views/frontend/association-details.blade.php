@@ -14,30 +14,29 @@
           </div>
         </div>
       </section>
+      <section class="section section-lg bg-default">
 
-<div class="container-fluid">
+      <div class="container container-relative">
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Details Association</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i> Add Association</a>
+    <h1 class="h3 mb-0 text-gray-800">About Association</h1>
+    <a  href="{{route('enroll', ['user_id' => auth()->id(), 'association_id' => $association->id])}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i> Enroll Association</a>
 </div>
 <div class="row">
  <!-- Content Column -->
     <div class="col-lg-6 mb-4"> 
     <div class="border-faded p-3 mb-g d-flex">
-    <img src="https://annuaire-velo.tn/wp-content/uploads/2021/11/bike_lovers_sousse.png" alt="rover" />
+    <img src="{{ asset('images/' . $association->image) }}" alt="rover" />
     </div>        
     <br>
-    <p> <strong> Bike Lovers Sousse </strong> est un groupe de passionné(e)s de vélos de la ville de Sousse et ses environs.
-Vous pouvez retrouver son actualité sur son groupe public Facebook.
-Ce groupe de cyclistes est très dynamique et organise régulièrement des sorties vélos en groupe.  </p>
+    <p> {{ $association -> description }}  </p>
 <br>
 <i class="fa-solid fa-users"></i>
-<span> Responsable : Narjes et Rim  </span>
+<span> Owner : {{ $user -> name }}  </span>
 <br>
 <i class="fa-solid fa-mobile"></i>
-<span> Téléphone : (+216) 28 004 640  </span>
+<span> Contact : {{ $user -> phone }} </span>
 
     </div>
 	<div class="col-lg-6 mb-4">
@@ -157,4 +156,7 @@ function print(id) {
 
 
 </div>
+  </section>
 @endsection
+
+

@@ -31,14 +31,14 @@ class CreateNewUser implements CreatesNewUsers
             'city' => ['required', 'string', 'max:255'],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
-        //dd($input['birth']);
+        //dd($input['gender']);
 
         return User::create([
+            'birth' => $input['birth'],
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
             'last_name' => $input['last_name'],
-            'birth' => $input['birth'],
             'phone' => $input['phone'],
             'address' => $input['address'],
             'city' => $input['city'],

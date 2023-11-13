@@ -1,8 +1,5 @@
 @extends('backend.master')
-
 @section('content')
-
-
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -10,8 +7,7 @@
                     <h2>Edit Event</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('evenements.index') }}" enctype="multipart/form-data">
-                        Back</a>
+                    <a class="btn btn-primary" href="{{ route('evenements.index') }}" enctype="multipart/form-data"> Back</a>
                 </div>
             </div>
         </div>
@@ -27,32 +23,39 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Event Name:</strong>
-                        <input type="text" name="nameevent" value="{{ $evenement->nameevent }}" class="form-control"
-                            placeholder="Company name">
-                        @error('nameevent')
+                        <input type="text" name="name" value="{{ $evenement->name }}" class="form-control" placeholder="Event name">
+                        @error('name')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>creator email:</strong>
-                        <input type="email" name="themeevent" class="form-control" placeholder="Company Email"
-                            value="{{ $evenement->themeevent }}">
-                        @error('themeevent')
+                        <strong>Event description:</strong>
+                        <input type="text" name="description" value="{{ $evenement->description }}" class="form-control" placeholder="Event description" >
+                        @error('description')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Event Place:</strong>
-                        <input type="text" name="lieuevent" value="{{ $evenement->lieuevent }}" class="form-control"
-                            placeholder="Company Address">
-                        @error('lieuevent')
+                        <strong>Event location:</strong>
+                        <input type="text" name="location" value="{{ $evenement->location }}" class="form-control" placeholder="Event location">
+                        @error('location')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Event date:</strong>
+                        <input type="date" name="date" value="{{ $evenement->date->format('Y-m-d') }}" class="form-control" placeholder="Event date">
+                        @error('date')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    
                 </div>
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
             </div>

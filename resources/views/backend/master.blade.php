@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="alphacoders">
-    <link rel="icon" href="img/fav.ico" type="image/x-icon" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
 
     <title> SPINUNITY Dashboard </title>
 
@@ -38,7 +37,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('shared.sidebar')
+        @include('backend.shared.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -48,7 +47,7 @@
             <div id="content">
 
                 <!-- header -->
-                @include('shared.header')
+                @include('backend.shared.header')
                 <!-- End of header -->
                 
 

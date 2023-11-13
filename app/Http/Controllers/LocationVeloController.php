@@ -30,7 +30,7 @@ class LocationVeloController extends Controller
      */
     public function create( Bike $bike ,User $user )
     {
-        return view('FrontEnd.locationvelo.Addlocation',compact("bike","user"));
+        return view('frontend.rentbike.rent',compact("bike","user"));
     }
 
     /**
@@ -140,10 +140,16 @@ class LocationVeloController extends Controller
  *  Display a listing of the resource.
  * @return \Illuminate\Http\Response
 */
-public function rent(Bike $bike ,User $user ) {
-    return view('frontend.rentbike',compact("bike","user"));
-}
+public function rent()
+{
+    $userId = request('user_id');
+    $bikeId = request('bike_id');
+    // Assuming you have Eloquent relationships defined in your models
+    $user = User::findOrFail($userId);
+    $bike = Bike::findOrFail($bikeId);
 
+    return view('frontend.shop.rentbike', compact('bike', 'user'));
+}
  /**
      * Provision a new web server.
      *

@@ -3,20 +3,14 @@
 <html>
     <head>
         <title>
-            BICYCLE
+            SPINUNITY
         </title>
         <meta charset="utf-8">
         <!--CSS-->
-        <link rel="icon" href="img/fav.ico" type="image/x-icon" />
-
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="icon" href="images/logo.png"/>
        <!--  <link rel="stylesheet" type="text/css" href="css/style.css">-->
-        <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/sb-admin-2.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
-        <link rel="stylesheet" href="css/fonts.css" />
-        <link rel="stylesheet" href="css/style1.css" />
+        <link rel="stylesheet" href="{{ asset('css/fonts.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/style1.css') }}" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
  <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.draw/src/leaflet.draw.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
@@ -34,36 +28,38 @@
       type="text/css"
       href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CRoboto:400"
     />
+
+      <!-- font awesome style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+<!-- responsive style -->
+<link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
+<base href="/">
+
     </head>
     <body>
        <header id="HOME">
 
        <!-- Navigation -->
-       @include('frontend.navigation')
+       @include('frontend.shared.navigation')
        <!-- End Navigation -->
     
                  <!-- Begin Page Content -->
                  @yield('front_content')
-                        <!-- End of Page Content -->
+                 <!-- End of Page Content -->
 
        <!-- Navigation -->
-       @include('frontend.footer')
+       @include('frontend.shared.footer')
        <!-- End Navigation -->
-        
-        <section class="loading-overlay">
-       <div class="sk-cube-grid">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
-        <div class="sk-cube sk-cube3"></div>
-        <div class="sk-cube sk-cube4"></div>
-        <div class="sk-cube sk-cube5"></div>
-        <div class="sk-cube sk-cube6"></div>
-        <div class="sk-cube sk-cube7"></div>
-        <div class="sk-cube sk-cube8"></div>
-        <div class="sk-cube sk-cube9"></div>
-       </div>
-       </section>
-       
+      
        
        
         <script src="js/jquery.js"></script>
@@ -76,6 +72,8 @@
         <script src="js/core.min.js"></script>
         <script src="js/script.js"></script>
         <script>new WOW().init();</script>
+        
     </body>
+    
 </html>
 </x-app-layout>

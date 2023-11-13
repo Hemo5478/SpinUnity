@@ -8,11 +8,12 @@
         "php": "^8.0.2",
         "anhskohbo/no-captcha": "^3.4",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.19",
+        "laravel/framework": "*",
         "laravel/jetstream": "^2.12",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
+        "mongodb/mongodb": "*",
         "stripe/stripe-php": "^9.8"
     },
     "require-dev": {

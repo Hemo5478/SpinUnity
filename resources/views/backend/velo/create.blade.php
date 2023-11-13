@@ -1,9 +1,8 @@
-<form action="" method="POST" enctype="multipart/form-data">
     <div class="modal fade text-left" id="ModalCreate" tabindex="-1" role="dialog"aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">{{__('Ajouter vélo') }}</h4>
+                    <h4 class="modal-title">{{__('Add Bike') }}</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="close"></button>
                     <span aria-hidden="true">&times;</span>
                 </div>
@@ -14,13 +13,10 @@
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
                         <form action="{{ route('bikes.store') }}" method="POST" enctype="multipart/form-data">
-                        
                             @csrf
-
                             <div class="form-group">
                                 <label class="font-weight-bold">Image</label>
                                 <input type="file" class="form-control @error('imageUrl') is-invalid @enderror" name="imageUrl">
-                            
                                 <!-- error message untuk title -->
                                 @error('imageUrl')
                                     <div class="alert alert-danger mt-2">
@@ -30,8 +26,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Marque</label>
-                                <input type="text" class="form-control @error('marque') is-invalid @enderror" name="marque" value="{{ old('marque') }}" placeholder="marque">
+                                <label class="font-weight-bold">Brand</label>
+                                <input type="text" class="form-control @error('marque') is-invalid @enderror" name="marque" value="{{ old('marque') }}" placeholder="Brand">
                             
                                 <!-- error message untuk title -->
                                 @error('marque')
@@ -41,8 +37,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Vitesse</label>
-                                <input type="text" class="form-control @error('vitesse') is-invalid @enderror" name="vitesse" value="{{ old('vitesse') }}" placeholder="vitesse">
+                                <label class="font-weight-bold">Speed</label>
+                                <input type="text" class="form-control @error('vitesse') is-invalid @enderror" name="vitesse" value="{{ old('vitesse') }}" placeholder="Speed">
                             
                                 <!-- error message untuk title -->
                                 @error('vitesse')
@@ -68,8 +64,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Etat</label>
-                                <input type="text" class="form-control @error('etat') is-invalid @enderror" name="etat" value="{{ old('etat') }}" placeholder="etat">
+                                <label class="font-weight-bold">Status</label>
+                                <input type="text" class="form-control @error('etat') is-invalid @enderror" name="etat" value="{{ old('etat') }}" placeholder="Status">
                             
                                 <!-- error message untuk title -->
                                 @error('etat')
@@ -79,8 +75,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Couleur</label>
-                                <input type="color" class="form-control @error('couleur') is-invalid @enderror" name="couleur" value="{{ old('couleur') }}" placeholder="couleur">
+                                <label class="font-weight-bold">Color</label>
+                                <input type="color" class="form-control @error('couleur') is-invalid @enderror" name="couleur" value="{{ old('couleur') }}" placeholder="Color">
                             
                                 <!-- error message untuk title -->
                                 @error('couleur')
@@ -90,8 +86,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Taille</label>
-                                <input type="text" class="form-control @error('taille') is-invalid @enderror" name="taille" value="{{ old('taille') }}" placeholder="taille">
+                                <label class="font-weight-bold">Size</label>
+                                <input type="text" class="form-control @error('taille') is-invalid @enderror" name="taille" value="{{ old('taille') }}" placeholder="Size">
                             
                                 <!-- error message untuk title -->
                                 @error('taille')
@@ -101,8 +97,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Prix</label>
-                                <input type="text" class="form-control @error('prix') is-invalid @enderror" name="prix" value="{{ old('prix') }}" placeholder="prix">
+                                <label class="font-weight-bold">Price</label>
+                                <input type="text" class="form-control @error('prix') is-invalid @enderror" name="prix" value="{{ old('prix') }}" placeholder="Price">
                             
                                 <!-- error message untuk title -->
                                 @error('prix')
@@ -112,8 +108,8 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold">Quantité</label>
-                                <input type="text" class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" placeholder="quantite">
+                                <label class="font-weight-bold">Qantity</label>
+                                <input type="text" class="form-control @error('quantite') is-invalid @enderror" name="quantite" value="{{ old('quantite') }}" placeholder="Quantity">
                             
                                 <!-- error message untuk title -->
                                 @error('quantite')
@@ -123,8 +119,8 @@
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-primary">AJOUTER</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                            <button type="submit" class="btn btn-md btn-primary">Add</button>
+                            <button type="reset" class="btn btn-md btn-warning">Reset</button>
 
                         </form> 
                     </div>
@@ -137,4 +133,3 @@
             </div>
         </div>
     </div>
-</form>

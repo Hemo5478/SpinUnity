@@ -10,6 +10,7 @@ class Association extends Model
 {
     use HasFactory;
     protected $fillable = ['owner_id', 'name', 'localisation', 'description', 'responsable' ,'image'];
+    protected $primaryKey = 'id';
 
     /**
      * Get the comments for the blog post.
@@ -22,6 +23,11 @@ class Association extends Model
     public function owner()
     {
         return $this->belongsTo(User::class, 'owner_id');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'associations_users');
     }
 
 }

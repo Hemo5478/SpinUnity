@@ -4,9 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\Association;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Achievement;
+use Illuminate\Support\Facades\Auth;
 
 class AssociationController extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function enroll()
+    {
+        $userId = request('user_id');
+        $associationId = request('association_id');
+        $user = User::find($userId);
+        $association = Association::find($associationId);
+        $achievementPoints = 100;
+        $achievement = new Achievement([
+            'name' => 'Your Achievement Title',
+            'description' => 'Your Achievement Description',
+            'points' => $achievementPoints, 
+            'user_id' => $userId 
+        ]);
+        $achievement->save();
+        $user->increment('total_points', $achievementPoints);
+        $user->save();
+
+        if ($user && $association) {
+            // Attach the user to the association and save additional data in the pivot table
+            $user->associations()->attach($association);
+    
+            return redirect()->route('user-association')->with('success', 'Enrolled in the association successfully.');
+        }
+    
+        return redirect()->route('user-association')->with('error', 'Failed to enroll in the association.');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +63,8 @@ class AssociationController extends Controller
      */
     public function create()
     {
-        return view('backend.association.create');
+        $users = User::all();
+        return view('backend.association.create', compact('users') );
     }
 
     /**
@@ -42,6 +80,7 @@ class AssociationController extends Controller
             'localisation'          =>  'required',
             'description'          =>  'required',
             'responsable'         =>  'required',
+            'user_id'         =>  'required',
             'image'         =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
             'g-recaptcha-response' => 'required|captcha'
 
@@ -52,7 +91,7 @@ class AssociationController extends Controller
         request()->image->move(public_path('images'), $file_name);
 
         $association = new Association;
-
+        $association->user_id = $request->user_id;
         $association->name = $request->name;
         $association->localisation = $request->localisation;
         $association->description = $request->description;
@@ -139,33 +178,35 @@ class AssociationController extends Controller
         return redirect()->route('associations.index')->with('success', 'Association Data deleted successfully');
     }
 
-    /** 
- * 
- * 
- *  Display a listing of the resource.
+/** 
+ * Display a listing of the resource.
+ *
  * @return \Illuminate\Http\Response
-*/
-public function association() {
-    $data = Association::latest()->paginate(9);
+ */
+public function association()
+{
+    $userId = auth()->id();
 
-    return view('frontend.association', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
+    // Use whereDoesntHave to retrieve associations where the user is not enrolled
+    $data = Association::whereDoesntHave('users', function ($query) use ($userId) {
+        $query->where('user_id', $userId);
+    })->paginate(9);
+
+    return view('frontend.association', compact('data'));
 }
 
-
-
-    /** 
- * 
- * 
- *  Display a listing of the resource.
- * @return \Illuminate\Http\Response
-*/
-public function associationdetails() {
-    $data = Association::latest()->paginate(9);
-
-    return view('frontend.association-details', compact('data'))->with('i', (request()->input('page', 1) - 1) * 5);
-}
-
-
+ /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Association  $association
+     * @return \Illuminate\Http\Response
+     */
+    public function associationdetails($associationeId)
+    {
+        $association = Association::findOrFail($associationeId);
+        $user = User::findOrFail($association -> user_id);
+        return view('frontend.association-details', compact('association', 'user'));
+    }
  /**
      * Provision a new web server.
      *

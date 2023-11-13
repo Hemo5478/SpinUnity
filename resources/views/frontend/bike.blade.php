@@ -18,6 +18,11 @@
 <section class="section-lg bg-default position-relative">
         <div class="container wow-outer container-relative">
           <!-- Owl Carousel-->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">My Bike</h1>
+    <a href="{{route('shop')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-dollar fa-sm text-white-50"></i> Purchase Bike</a>
+</div>
        
           <div class="owl-carousel owl-dots-dark wow fadeInUp" data-items="1" data-md-items="2" data-lg-items="3" data-dots="true" data-nav="false" data-stage-padding="15" data-loop="false" data-margin="15" data-mouse-drag="false">
           @if(count($data) > 0) 

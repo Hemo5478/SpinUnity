@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Evenement;
 use Illuminate\Http\Request;
+use App\Models\Association;
 
 class EvenementController extends Controller
 {
@@ -24,7 +25,8 @@ class EvenementController extends Controller
     */
     public function create()
     {
-        return view('backend.evenement.create');
+        $associations = Association::all();
+        return view('backend.evenement.create', compact('associations'));
     }
 
     /**
@@ -34,15 +36,23 @@ class EvenementController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function store(Request $request)
-    {
+    { 
         $request->validate([
-            'nameevent' => 'required',
-            'themeevent' => 'required',
-            'lieuevent' => 'required',
+            'description' => 'required',
+            'name' => 'required',
+            'location' => 'required',
             'date' => 'required',
-        ]);
-        
-        Evenement::create($request->post());
+            'association_id' => 'required'
+        ]); 
+        $event = new Evenement;
+
+        $event->description = $request->description;
+        $event->name = $request->name;
+        $event->location = $request->location;
+        $event->date = $request->date;
+        $event->association_id = $request->association_id;
+
+        $event->save();
 
         return redirect()->route('evenements.index')->with('success','evenement has been created successfully.');
     }
@@ -79,9 +89,11 @@ class EvenementController extends Controller
     public function update(Request $request,Evenement $evenement)
     {
         $request->validate([
-            'nameevent' => 'required|alpha',
-            'themeevent' => 'required|alpha',
-            'lieuevent' => 'required',
+            'description' => 'required',
+            'name' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+            'association_id' => 'required'
         ]);
         
         $evenement->fill($request->post())->save();

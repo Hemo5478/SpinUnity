@@ -12,38 +12,7 @@
           </div>
         </div>
       </section>
-<section class="section section-lg text-center bg-default">
-        <div class="container">
-          <div class="row row-50">
-            <div class="col-md-6 col-lg-4">
-              <div class="box-icon-classic">
-                <div class="box-icon-inner"><span class="icon-xl linearicons-phone-incoming icon-primary"></span></div>
-                <div class="box-icon-caption">
-                  <h4><a href="tel:#">1-800-123-1234</a></h4>
-                  <p>You can call us anytime</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box-icon-classic">
-                <div class="box-icon-inner"><span class="icon-xl linearicons-map2 icon-primary"></span></div>
-                <div class="box-icon-caption">
-                  <h4><a href="#">51 Francis Street, Darlinghurst NSW 2010, United States</a></h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="box-icon-classic">
-                <div class="box-icon-inner"><span class="icon-xl linearicons-paper-plane icon-primary"></span></div>
-                <div class="box-icon-caption">
-                  <h4><a href="mailto:#">info@demolink.org</a></h4>
-                  <p>Feel free to email us your questions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <section class="section section-lg bg-gray-1 text-center">
         <div class="container">
@@ -55,21 +24,24 @@
             {{ session('status') }}
         </div>
         @endif
-              <form class="" action="{{ route('reclamations.store') }}" method="POST" enctype="multipart/form-data">
+              <form action="{{ route('reclamations.store') }}" method="POST" enctype="multipart/form-data">
               @csrf 
               <div class="form-wrap">
+                <br/>
+              <label for="contact-name">Claim Object</label>
+
                   <input class="form-input" type="text" name="titrereclamation" required>
                   @error('titrereclamation')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                   @enderror
-                  <label class="form-label" for="contact-name">Claim Object</label>
                 </div>
                 <div class="form-wrap">
+                <label for="contact-email">Event</label>
+
                   <input class="form-input"  type="text" name="nomevent" required>
                   @error('nomevent')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                   @enderror
-                  <label class="form-label" for="contact-email">Event</label>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
@@ -92,5 +64,36 @@
         </div>
       </section>
      
-    
+      <section class="section section-lg text-center bg-default">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-md-6 col-lg-4">
+              <div class="box-icon-classic">
+                <div class="box-icon-inner"><span class="icon-xl linearicons-phone-incoming icon-primary"></span></div>
+                <div class="box-icon-caption">
+                  <h4><a href="tel:#">1-800-123-1234</a></h4>
+                  <p>You can call us anytime</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box-icon-classic">
+                <div class="box-icon-inner"><span class="icon-xl linearicons-map2 icon-primary"></span></div>
+                <div class="box-icon-caption">
+                  <h4><a href="#">Immeuble Lac 6, Bloc A, 2ème étage 1053 Les Berges du Lac, Tunisia</a></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="box-icon-classic">
+                <div class="box-icon-inner"><span class="icon-xl linearicons-paper-plane icon-primary"></span></div>
+                <div class="box-icon-caption">
+                  <h4><a href="mailto:#">info@demolink.org</a></h4>
+                  <p>Feel free to email us your questions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 @endsection

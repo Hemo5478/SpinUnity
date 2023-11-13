@@ -66,19 +66,19 @@
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                     <label for="male" class="form-check-label">Date of birth</label>
 
-                                    <input id="birth" name="birth" type="date" class="form-control form-control-user" :value="old('birth')" required>
+                                    <input id="birth" name="birth" type="date" class="form-control form-control-user" required>
                                     </div>
                                     <div class="col-sm-6">
                                     <label for="male" class="form-check-label">Gender</label>
 
                                     <div class="form-check">
                                         <input id="male" name="gender" type="radio" class="form-check-input"
-                                            value="Male" {{ old('gender') === 'Male' ? 'checked' : '' }} required>
+                                            value=" {{ old('gender') === 'Male' ? 'checked' : '' }}" required>
                                         <label for="male" class="form-check-label">Male</label>
                                     </div>
                                     <div class="form-check">
                                         <input id="female" name="gender" type="radio" class="form-check-input"
-                                            value="Female" {{ old('gender') === 'Female' ? 'checked' : '' }} required>
+                                            value="{{ old('gender') === 'Female' ? 'checked' : '' }}" required>
                                         <label for="female" class="form-check-label">Female</label>
                                     </div>
                                     </div>

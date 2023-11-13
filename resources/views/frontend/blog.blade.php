@@ -23,7 +23,8 @@
           @if(count($data) > 0) 
        @foreach($data as $row)
           <div class="post-corporate post-corporate-img-bg">
-              <div class="post-corporate-bg" style="background-image: url({{ asset('images/' . $row->image) }}); background-size: cover;"></div><a class="badge post-corporate-badge" href="#">{{ $row->date }}</a>
+              <div class="post-corporate-bg" style="background-image: url({{ asset('images/' . $row->image) }}); background-size: cover;"></div>
+              <a class="badge post-corporate-badge" href="#">{{ $row->date }}</a>
               <h4 class="post-corporate-title"><a href="blog-post.html">{{$row -> title}}</a></h4>
               <div class="post-corporate-text">
                 <p>{{ $row->description }}</p>

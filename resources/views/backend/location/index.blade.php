@@ -1,7 +1,6 @@
 @extends('backend.master')
 @section('content')   
 
-<a href="{{ route('locationvelo.create', ['user'=>$user->id ,'bike'=> $bike->id]) }}"  class="btn btn-md btn-success mb-3">Ajouter Location</a>
 
 @if($message = Session::get('success'))
 <div class="alert alert-success">

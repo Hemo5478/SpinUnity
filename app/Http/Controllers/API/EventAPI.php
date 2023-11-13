@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Evenement;
 use Illuminate\Http\Request;
 
-class UserAPI extends Controller
+class EventAPI extends Controller
 {
     public function index()
     {

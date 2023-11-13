@@ -1,63 +1,73 @@
-<section
-        class="section section-lg section-main-bunner section-main-bunner-filter text-center text-lg-left"
-      >
-      
-        <div
-          class="cross-wrap cross-1"
-          data-parallax-scroll='{"y": 60, "x": 0,  "smoothness": 50 }'
-          style="
-            transform: translate3d(0px, 53.503px, 0px) rotateX(0deg)
-              rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
-            -webkit-transform: translate3d(0px, 53.503px, 0px) rotateX(0deg)
-              rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
-          "
-        >
-        </div>
-        <div
-          class="cross-wrap cross-5"
-          data-parallax-scroll='{"y": -100, "x": 0,  "smoothness": 70 }'
-          style="
-            transform: translate3d(0px, -89.101px, 0px) rotateX(0deg)
-              rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
-            -webkit-transform: translate3d(0px, -89.101px, 0px) rotateX(0deg)
-              rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
-          "
-        >
-
-        </div>
-        
-        <div
-          class="main-bunner-img"
-          style="
-            background-image: url('img/bg-banner-2.jpg');
-            background-size: cover;
-          "
-        ></div>
-        
-        <div class="main-bunner-inner ">
-        <img src="img/logo.png" alt="" width="100" height="100" />
-
-          <div class="container">
-            <div class="row row-50 justify-content-lg-center align-items-lg-center">
-              <div class="col-lg-12 ">
-                <div class="banner-classic" >
-                  <h2 class="banner-classic-subtitle ">
-                    It's all about the ride
-                  </h2>
-                  <h1 class="banner-classic-title">
-                    <span>Spin</span
-                    ><span class="text-primary">Unity</span>
-                  </h1>
-                  <a class="button button-lg-custom button-primary" href="{{route('register')}}"
-                    >Learn More</a
-                  >
+<section class=" slider_section position-relative">
+      <div class="jet_box">
+        <hr>
+        <h6>
+          jetcycle
+        </h6>
+        <hr>
+      </div>
+      <ol class="carousel-indicators indicator-2">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active indicator-li-1">01</li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+      </ol>
+      <div class="container-fluid h-100">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+            <div class="detail-box">
+              <h1>
+                Racing <br>
+                <span>
+                  Man cycle
+                </span>
+              </h1>
+              <p>
+                There are many variations of passages of Lorem Ipsum available.
+              </p>
+              <div class="btn-box">
+                <a href="" class="btn-1">
+                  Shop Now
+                </a>
+                <a href="" class="btn-2">
+                  Get A Quote
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 px-0 h-100">
+            <div class="img_container h-100">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators indicator-1">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active indicator-li-1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section-transform-top section-custom-1">
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+  <section class="section-transform-top section-custom-1">
         <div class="container">
           <div class="box-countdown-dark">
             <div
@@ -123,7 +133,7 @@
                 </div>
               </div>
               <div class="col-lg-3 col-xl">
-                <a class="button button-primary button-lg button-block"  href="{{route('register')}}"
+                <a class="button button-primary button-lg button-block" href="{{route('register')}}"
                   >Register</a
                 >
               </div>
@@ -131,8 +141,9 @@
           </div>
         </div>
       </section>
+  <!-- about section -->
 
-<script>
+  <script>
       (function () {
   const second = 1000,
         minute = second * 60,
