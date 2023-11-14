@@ -45,7 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('DATABASE_URL', "mysql://avnadmin:AVNS_0HaRf3K7KUPAadaG07p@mysql-3e7ccd07-hamza96387-2e63.a.aivencloud.com:22946/defaultdb?ssl-mode=REQUIRED"),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),

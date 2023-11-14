@@ -17,7 +17,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://spin-unity.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -30,7 +30,7 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
 
-        "DATABASE_URL" : "mysql://tyPNhSMZJ45xnrn.root:Ry1dphisKePHtdZR@gateway01.eu-central-1.prod.aws.tidbcloud.com:4000/test"
+        "DATABASE_URL" : "mysql://avnadmin:AVNS_0HaRf3K7KUPAadaG07p@mysql-3e7ccd07-hamza96387-2e63.a.aivencloud.com:22946/defaultdb?ssl-mode=REQUIRED"
 
     }
 }
