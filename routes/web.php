@@ -29,6 +29,8 @@ use App\Http\Controllers\ShopController;
 */
 
 Route::get("/",[TemplateController::class,"home"]);
+Route::get("/dashboard",[TemplateController::class,"index"]);
+Route::get("/home",[TemplateController::class,"frontend"]);
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])
       ->group(function () {
             Route::resource('home', FrontController::class);
