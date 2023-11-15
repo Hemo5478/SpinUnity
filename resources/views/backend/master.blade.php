@@ -35,11 +35,10 @@
 <body id="page-top">
 <base href="{{URL::asset('/')}}" target="_top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+       <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('shared.sidebar')
+        @include('backend.shared.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -64,9 +63,10 @@
             <!-- End of Main Content -->
 
 
-
         </div>
         <!-- End of Content Wrapper -->
+
+    </div>
 
     </div>
     <!-- End of Page Wrapper -->
