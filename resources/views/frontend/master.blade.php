@@ -47,7 +47,7 @@
 
                   <!-- RD Navbar Brand-->
                   <div class="">
-                    <a href="index.html"><img class="brand-logo-light" src="images/logobike.png" alt="" width="50" height="50"></a>
+                    <a href="index.html"><img class="brand-logo-light" src="images/logo.png" alt="" width="50" height="50"></a>
                 </div>
                   <div class="block-right">
                     <ul class="list-inline nav-list">
@@ -149,7 +149,7 @@
               <div class="col-12">
                 <a href="index.html"
                   ><img
-                    src="img/logobike.png"
+                    src="images/logo.png"
                     alt=""
                     width="100"
                     height="100"
