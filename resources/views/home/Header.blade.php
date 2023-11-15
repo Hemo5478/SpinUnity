@@ -16,20 +16,16 @@
           <div class="col-md-4 offset-md-1">
             <div class="detail-box">
               <h1>
-                Racing <br>
+                Spin <br>
                 <span>
-                  Man cycle
+                  Unity
                 </span>
               </h1>
               <p>
-                There are many variations of passages of Lorem Ipsum available.
-              </p>
+         Unleashing the power of community for cyclists to register, participate, and form associations seamlessly.            </p>
               <div class="btn-box">
                 <a href="" class="btn-1">
                   Shop Now
-                </a>
-                <a href="" class="btn-2">
-                  Get A Quote
                 </a>
               </div>
             </div>
@@ -50,12 +46,12 @@
                   </div>
                   <div class="carousel-item">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="">
+                      <img src="images/about-img.png" alt="">
                     </div>
                   </div>
                   <div class="carousel-item">
                     <div class="img-box">
-                      <img src="images/slider-img.png" alt="">
+                      <img src="images/f-1.png" alt="">
                     </div>
                   </div>
                 </div>
