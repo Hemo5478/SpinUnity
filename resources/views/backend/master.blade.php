@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="author" content="alphacoders">
+    <link rel="icon" href="img/fav.ico" type="image/x-icon" />
 
     <title> SPINUNITY Dashboard </title>
 
@@ -19,7 +20,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link rel="stylesheet" type="text/css" href="/css/sb-admin-2.min.css'">
+    <link rel="stylesheet" type="text/css" href="/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
  <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.draw/src/leaflet.draw.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
@@ -38,7 +39,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        @include('backend.shared.sidebar')
+        @include('shared.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -48,7 +49,7 @@
             <div id="content">
 
                 <!-- header -->
-                @include('backend.shared.header')
+                @include('shared.header')
                 <!-- End of header -->
                 
 
@@ -75,22 +76,22 @@
     </a>
 
   
-    <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript-->
-    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script type="text/javascript" src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script type="text/javascript" src="js/sb-admin-2.min.js"></script>
+    <script type="text/javascript" src="/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script type="text/javascript" src="vendor/chart.js/Chart.min.js"></script>
+    <script type="text/javascript" src="/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script type="text/javascript" src="js/demo/chart-area-demo.js"></script>
-    <script type="text/javascript" src="js/demo/chart-pie-demo.js"></script>
+    <script type="text/javascript" src="/js/demo/chart-area-demo.js"></script>
+    <script type="text/javascript" src="/js/demo/chart-pie-demo.js"></script>
 
 
 </body>
