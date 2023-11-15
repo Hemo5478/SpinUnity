@@ -49,7 +49,7 @@
        <header id="HOME">
 
        <!-- Navigation -->
-       @include('frontend.shared.navigation')
+       @include('shared.navigation')
        <!-- End Navigation -->
     
                  <!-- Begin Page Content -->
@@ -57,7 +57,7 @@
                  <!-- End of Page Content -->
 
        <!-- Navigation -->
-       @include('frontend.shared.footer')
+       @include('shared.footer')
        <!-- End Navigation -->
       
        
