@@ -81,9 +81,7 @@ class AssociationController extends Controller
             'description'          =>  'required',
             'responsable'         =>  'required',
             'user_id'         =>  'required',
-            'image'         =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000',
-            'g-recaptcha-response' => 'required|captcha'
-
+            'image'         =>  'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048|dimensions:min_width=100,min_height=100,max_width=1000,max_height=1000'
         ]);
 
         $file_name = time() . '.' . request()->image->getClientOriginalExtension();
