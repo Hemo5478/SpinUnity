@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'veloapp.reply@outlook.com'),
-        'name' => env('MAIL_FROM_NAME', 'VeloApp'),
+        'address' => env('MAIL_FROM_ADDRESS', 'spin-unity.reply@outlook.com'),
+        'name' => env('MAIL_FROM_NAME', 'SpinUnity'),
     ],
 
     /*
