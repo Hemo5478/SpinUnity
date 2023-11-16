@@ -24,6 +24,9 @@
         "MAIL_PORT":"587",
         "MAIL_ENCRYPTION":"tls",
 
+        "NOCAPTCHA_SECRET":"6LdSkJMiAAAAAPLkhEDaCVexxHyiXXb_f_IAA_fS",
+        "NOCAPTCHA_SITEKEY":"6LdSkJMiAAAAAFeBXCht9ux75AjNxjeE2v0aEHr5",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
