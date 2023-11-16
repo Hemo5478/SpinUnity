@@ -19,6 +19,11 @@
         "APP_DEBUG": "true",
         "APP_URL": "https://spin-unity.vercel.app",
 
+        "MAIL_DRIVER":"smtp",
+        "MAIL_HOST":"smtp-mail.outlook.com",
+        "MAIL_PORT":"587",
+        "MAIL_ENCRYPTION":"tls",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
