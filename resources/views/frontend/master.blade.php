@@ -9,7 +9,7 @@
     <!--CSS-->
     <link rel="icon" href="images/logo.png" />
     <!--  <link rel="stylesheet" type="text/css" href="css/style.css">-->
-    <link rel="stylesheet" href="{{ asset('/css/fonts.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://spin-unity.vercel.app/css/fonts.css') }}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://leaflet.github.io/Leaflet.draw/src/leaflet.draw.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
@@ -31,16 +31,16 @@
 
 
     <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('https://spin-unity.vercel.app/css/bootstrap.css') }}" />
 
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ asset('/css/style1.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://spin-unity.vercel.app/css/style1.css') }}" />
 
-    <link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('https://spin-unity.vercel.app/css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="{{ asset('/css/responsive.css') }}" rel="stylesheet" />
+    <link href="{{ asset('https://spin-unity.vercel.app/css/responsive.css') }}" rel="stylesheet" />
     <base href="/">
 
 </head>
