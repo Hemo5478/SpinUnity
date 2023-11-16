@@ -6,13 +6,13 @@
               <div class="box-img-animate"> 
           
                 <div class="box-img-animate-item" data-parallax-scroll="{&quot;y&quot;: 150, &quot;x&quot;: 0,  &quot;smoothness&quot;: 50 }" style="transform:translate3d(0px, 92.483px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(0px, 92.483px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-                <img src="images/feature1.png"  width="400" height="400" alt="">
+                <img src="images/g5.png"  width="400" height="400" alt="">
 </div>
                 <div class="box-img-animate-item" data-parallax-scroll="{&quot;y&quot;:70, &quot;x&quot;: -150,  &quot;smoothness&quot;: 50 }" style="transform:translate3d(-56.129px, 26.243px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(-56.129px, 26.243px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-                <img src="images/feature1.png" width="400" height="400" alt="">
+                <img src="images/g1.png" width="400" height="400" alt="">
 </div>
                 <div class="box-img-animate-item" data-parallax-scroll="{&quot;y&quot;:20, &quot;x&quot;: 20,  &quot;smoothness&quot;: 50 }" style="transform:translate3d(8.644px, 8.644px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); -webkit-transform:translate3d(8.644px, 8.644px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1); ">
-                <img src="images/feature1.png" width="400" height="400" alt="">
+                <img src="images/g3.png" width="400" height="400" alt="">
 </div>
               </div>
             </div>

@@ -93,7 +93,7 @@
                                                 href="/user-blog">Blogs</a></li>
 
                                         <li class="nav-item dropdown no-arrow ">
-                                            <a class="nav-link dropdown-toggle " href="#" id="userDropdown"
+                                            <a class="nav-link " href="#" id="userDropdown"
                                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
                                                 <span
@@ -101,23 +101,7 @@
                                                 <img class="img-profile rounded-circle" width="50"
                                                     src="{{ Auth::user()->profile_photo_url }}">
                                             </a>
-                                            <!-- Dropdown - User Information -->
-                                            <div class="dropdown-menu dropdown-menu-right"
-                                                aria-labelledby="userDropdown">
-                                                <a class="dropdown-item" href="{{ route('profile.show') }}">
-                                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    <span style="font-weight: 20px; color:blue;">Profile</span>
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    <span style="font-weight: 20px; color:blue;">Settings</span>
-                                                </a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal"
-                                                    data-target="#logoutModal">
-                                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                    <span style="font-weight: 20px; color:blue;">Logout</span>
-                                                </a>
-                                            </div>
+                                     
                                         </li>
                                     </ul>
                                 </div>

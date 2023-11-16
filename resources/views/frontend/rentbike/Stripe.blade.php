@@ -24,7 +24,7 @@
             <div class="panel panel-default credit-card-box">
                 <div class="panel-heading display-table" >
                     <div class="row" >
-                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <h4 class="panel-title display-td" >Payment Details</h4>
                    
                     </div>                    
                 </div>
