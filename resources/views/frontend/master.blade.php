@@ -90,7 +90,7 @@
                                         <li class="list-inline-item"><a class="link-menu-item "
                                                 href="/user-claim">Claims</a></li>
                                         <li class="list-inline-item"><a class="link-menu-item "
-                                                href="/user-blog">Blogs</a></li>
+                                                href="/dashboard">Admin</a></li>
 
                                         <li class="nav-item dropdown no-arrow ">
                                             <a class="nav-link " href="#" id="userDropdown"
